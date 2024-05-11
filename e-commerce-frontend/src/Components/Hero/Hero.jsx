@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css";
-import hero from "../Assets/hero2.png";
+import hero from "../Assets/hero2.jpg";
 import arrow_icon from "../Assets/arrow.png";
 
 const Hero = () => {
@@ -11,7 +11,6 @@ const Hero = () => {
         <div>
           <div className="hero-hand-icon">
             <p>Find</p>
-            
           </div>
           <p>Your</p>
           <p>Colorful Style</p>

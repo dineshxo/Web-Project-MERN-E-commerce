@@ -1,5 +1,5 @@
 .hero {
-  height: 100vh;
+  height: 85vh;
 
   display: flex;
 
@@ -11,19 +11,19 @@
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  padding-left: 180px;
+  padding-left: 120px;
   line-height: 1.1;
 }
 
 .hero-left h2 {
-  color: #090909;
-  font-size: 26px;
+  color: #686868;
+  font-size: 20px;
   font-weight: 600;
 }
 
 .hero-left p {
-  color: #171717;
-  font-size: 100px;
+  color: #686868;
+  font-size: 70px;
   font-weight: 700;
 }
 
@@ -53,14 +53,17 @@
   flex: 1;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding-right: 50px;
+  justify-content: flex-start;
+  padding-left: 300px;
+
+
   overflow: hidden;
 }
 
 .hero-right img {
   max-width: 100%;
-  height: auto;
+  height: 100%;
+  border-radius: 100px;
 
 
 
@@ -91,8 +94,14 @@
     font-size: 18px;
   }
 
+  .hero-right {
+    padding-left: 0;
+  }
+
   .hero-right img {
     width: 500px;
+
+    margin-right: 100px;
   }
 }
 

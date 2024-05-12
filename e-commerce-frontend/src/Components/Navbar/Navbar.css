@@ -2,7 +2,10 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 12px;
+  padding-top: 8px;
+  padding-bottom: 12px;
+  padding-right: auto;
+  width: 98%;
 
 }
 
@@ -22,7 +25,7 @@
   display: flex;
   align-items: center;
   list-style: none;
-  gap: 40px;
+  gap: 30px;
   color: #7d0011;
   font-size: 18px;
   font-weight: 600;
@@ -68,7 +71,7 @@
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
-  background: #512b20;
+  background: #d79db4;
 }
 
 .nav-login-cart button:active {

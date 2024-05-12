@@ -5,27 +5,35 @@ import Cart from "./Pages/Cart";
 import Product from "./Pages/Product";
 import Footer from "./Components/Footer/Footer";
 import ShopCategory from "./Pages/ShopCategory";
-import women_banner from "./Components/Assets/banner_women.png";
-import men_banner from "./Components/Assets/banner_mens.png";
-import kid_banner from "./Components/Assets/banner_kids.png";
+import garden_banner from "./Components/Assets/banner_garden.png";
+import home_banner from "./Components/Assets/banner_home.png";
+import office_banner from "./Components/Assets/banner_office.png";
 import LoginSignup from "./Pages/LoginSignup";
 
 function App() {
-
   return (
     <div>
       <Router>
         <Navbar />
         <Routes>
           <Route path="/" element={<Shop gender="all" />} />
-          <Route path="/mens" element={<ShopCategory banner={men_banner} category="men" />} />
-          <Route path="/womens" element={<ShopCategory banner={women_banner} category="women" />} />
-          <Route path="/kids" element={<ShopCategory banner={kid_banner} category="kid" />} />
-          <Route path='/product' element={<Product />}>
-            <Route path=':productId' element={<Product />} />
+          <Route
+            path="/home"
+            element={<ShopCategory banner={home_banner} category="home" />}
+          />
+          <Route
+            path="/garden"
+            element={<ShopCategory banner={garden_banner} category="garden" />}
+          />
+          <Route
+            path="/office"
+            element={<ShopCategory banner={office_banner} category="office" />}
+          />
+          <Route path="/product" element={<Product />}>
+            <Route path=":productId" element={<Product />} />
           </Route>
           <Route path="/cart" element={<Cart />} />
-          <Route path="/login" element={<LoginSignup/>} />
+          <Route path="/login" element={<LoginSignup />} />
         </Routes>
         <Footer />
       </Router>

@@ -35,39 +35,39 @@ const Navbar = () => {
           }}
         >
           <Link to="/" style={{ textDecoration: "none" }}>
-            Shop
+            Welcome
           </Link>
           {menu === "shop" ? <hr /> : <></>}
         </li>
         <li
           onClick={() => {
-            setMenu("mens");
+            setMenu("home");
           }}
         >
-          <Link to="/mens" style={{ textDecoration: "none" }}>
-            Men
+          <Link to="/home" style={{ textDecoration: "none" }}>
+            Home
           </Link>
-          {menu === "mens" ? <hr /> : <></>}
+          {menu === "home" ? <hr /> : <></>}
         </li>
         <li
           onClick={() => {
-            setMenu("womens");
+            setMenu("garden");
           }}
         >
-          <Link to="/womens" style={{ textDecoration: "none" }}>
-            Women
+          <Link to="/garden" style={{ textDecoration: "none" }}>
+            Garden
           </Link>
-          {menu === "womens" ? <hr /> : <></>}
+          {menu === "garden" ? <hr /> : <></>}
         </li>
         <li
           onClick={() => {
-            setMenu("kids");
+            setMenu("office");
           }}
         >
-          <Link to="/kids" style={{ textDecoration: "none" }}>
-            Kids
+          <Link to="/office" style={{ textDecoration: "none" }}>
+            office
           </Link>
-          {menu === "kids" ? <hr /> : <></>}
+          {menu === "office" ? <hr /> : <></>}
         </li>
       </ul>
       <div className="nav-login-cart">

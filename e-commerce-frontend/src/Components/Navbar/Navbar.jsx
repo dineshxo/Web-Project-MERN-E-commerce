@@ -82,7 +82,7 @@ const Navbar = () => {
               window.location.replace("/");
             }}
           >
-            Logout
+            Log out
           </button>
         ) : (
           <Link to="/login" style={{ textDecoration: "none", zIndex: 99 }}>

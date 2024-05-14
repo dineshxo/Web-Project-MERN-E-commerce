@@ -65,7 +65,7 @@ const Navbar = () => {
           }}
         >
           <Link to="/office" style={{ textDecoration: "none" }}>
-            office
+            Office
           </Link>
           {menu === "office" ? <hr /> : <></>}
         </li>

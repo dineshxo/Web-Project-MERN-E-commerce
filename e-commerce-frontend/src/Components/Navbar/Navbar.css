@@ -88,7 +88,8 @@
   margin-left: -55px;
   border-radius: 11px;
   font-size: 14px;
-  background: red;
+  font-weight: 500;
+  background: #ff8c00;
   color: white;
 }
 

@@ -38,7 +38,7 @@ const ShopCategory = (props) => {
         })}
       </div>
       <div className="shopcategory-seemore">
-        <Link to="/" style={{ textDecoration: "none" }}>
+        <Link to="/" style={{ textDecoration: "none", color: "#ffffff" }}>
           See More..
         </Link>
       </div>

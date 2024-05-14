@@ -15,18 +15,13 @@ const ProductDisplay = (props) => {
   return (
     <div className="productdisplay">
       <div className="productdisplay-left">
-        <div className="productdisplay-img-list">
-          {product.image && (
-            <>
-              {Array.from({ length: 4 }, (_, index) => (
-                <img key={index} src={product.image} alt="img" />
-              ))}
-            </>
-          )}
-        </div>
         {product.image && (
           <div className="productdisplay-img">
-            <img className="productdisplay-main-img" src={product.image} alt="img" />
+            <img
+              className="productdisplay-main-img"
+              src={product.image}
+              alt="img"
+            />
           </div>
         )}
       </div>
@@ -41,27 +36,27 @@ const ProductDisplay = (props) => {
           <p>(122)</p>
         </div>
         <div className="productdisplay-right-prices">
-          <div className="productdisplay-right-price-old">${product.old_price}</div>
-          <div className="productdisplay-right-price-new">${product.new_price}</div>
-        </div>
-        <div className="productdisplay-right-description">
-          A lightweight, usually knitted, pullover shirt, close-fitting and with
-          a round neckline and short sleeves, worn as an undershirt or outer
-          garment.
-        </div>
-        <div className="productdisplay-right-size">
-          <h1>Select Size</h1>
-          <div className="productdisplay-right-sizes">
-            <div>S</div>
-            <div>M</div>
-            <div>L</div>
-            <div>XL</div>
-            <div>XXL</div>
+          <div className="productdisplay-right-price-old">
+            ${product.old_price}
+          </div>
+          <div className="productdisplay-right-price-new">
+            ${product.new_price}
           </div>
         </div>
-        <button onClick={() => { addToCart(product.id) }}>ADD TO CART</button>
-        <p className="productdisplay-right-category"><span>Category :</span> Women, T-shirt, Crop Top</p>
-        <p className="productdisplay-right-category"><span>Tags :</span> Modern, Latest</p>
+        <div className="productdisplay-right-description">
+          Prices are inclusive of taxes, and payment is required in full at the
+          time of purchase. Shipping and delivery times may vary, and returns or
+          exchanges are accepted within [number of days] days, subject to our
+          Return Policy. Some products come with a manufacturer's warranty.
+        </div>
+
+        <button
+          onClick={() => {
+            addToCart(product.id);
+          }}
+        >
+          ADD TO CART
+        </button>
       </div>
     </div>
   );

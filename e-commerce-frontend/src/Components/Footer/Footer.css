@@ -20,11 +20,7 @@
 
 }
 
-.footer-logo p {
-  color: #383838;
-  font-size: 46px;
-  font-weight: 700;
-}
+
 
 .footer-links {
   display: flex;
@@ -85,7 +81,7 @@
   }
 
   .footer-logo img {
-    width: 40px;
+    width: 280px;
   }
 
   .footer-logo p {

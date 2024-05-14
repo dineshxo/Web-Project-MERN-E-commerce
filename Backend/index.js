@@ -125,7 +125,7 @@ app.post("/removeproduct", async (req, res) => {
 //Creating API for getting all products
 app.get("/allproducts", async (req, res) => {
   let products = await Product.find({});
-  console.log("All Products Fetched");
+  console.log("All Furniture Received.");
   res.send(products);
 });
 
@@ -154,12 +154,10 @@ const Users = mongoose.model("Users", {
 app.post("/signup", async (req, res) => {
   let check = await Users.findOne({ email: req.body.email });
   if (check) {
-    return res
-      .status(400)
-      .json({
-        success: false,
-        errors: "existing user found with same email address",
-      });
+    return res.status(400).json({
+      success: false,
+      errors: "existing user found with same email address",
+    });
   }
   let cart = {};
   for (let i = 0; i < 300; i++) {
@@ -209,17 +207,11 @@ app.post("/login", async (req, res) => {
 app.get("/newcollections", async (req, res) => {
   let products = await Product.find({});
   let newCollection = products.slice(1).slice(-8);
-  console.log("NewCollection Fetched");
+
   res.send(newCollection);
 });
 
 //Creating endpoint for popular in women section
-app.get("/popularinwomen", async (req, res) => {
-  let products = await Product.find({ category: "women" });
-  let popular_in_women = products.slice(0, 4);
-  console.log("Popular in women fetched");
-  res.send(popular_in_women);
-});
 
 //Creating middelware to fetch user
 const fetchUser = async (req, res, next) => {
@@ -253,7 +245,7 @@ app.post("/addtocart", fetchUser, async (req, res) => {
 
 //Creating endpoint to remove product from cartdata
 app.post("/removefromcart", fetchUser, async (req, res) => {
-  console.log("removed", req.body.itemId);
+  console.log("Successfully removed", req.body.itemId);
   let userData = await Users.findOne({ _id: req.user.id });
   if (userData.cartData[req.body.itemId] > 0)
     userData.cartData[req.body.itemId] -= 1;

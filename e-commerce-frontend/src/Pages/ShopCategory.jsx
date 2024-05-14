@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./CSS/ShopCategory.css";
-import dropdown_icon from "../Components/Assets/dropdown_icon.png";
+
 import Item from "../Components/Item/Item";
 import { Link } from "react-router-dom";
 
@@ -19,21 +19,13 @@ const ShopCategory = (props) => {
 
   return (
     <div className="shopcategory">
-      <div className="shopcategory-indexSort">
-        <p>
-          <span>Showing 1 - 12</span> out of 54 Products
-        </p>
-        <div className="shopcategory-sort">
-          Sort by <img src={dropdown_icon} alt="" />
-        </div>
-      </div>
+      <div className="shopcategory-indexSort"></div>
       <div className="shopcategory-products">
         {allproducts.map((item, i) => {
           if (props.category === item.category) {
             return (
               <Item
                 id={item.id}
-                key={i}
                 name={item.name}
                 image={item.image}
                 new_price={item.new_price}
@@ -45,9 +37,9 @@ const ShopCategory = (props) => {
           }
         })}
       </div>
-      <div className="shopcategory-loadmore">
-        <Link to="/" style={{ textDecoration: "none" }}>
-          Explore More
+      <div className="shopcategory-seemore">
+        <Link to="/" style={{ textDecoration: "none", color: "#ffffff" }}>
+          See More..
         </Link>
       </div>
       <img src={props.banner} className="shopcategory-banner" alt="" />

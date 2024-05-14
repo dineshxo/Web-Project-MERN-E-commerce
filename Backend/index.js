@@ -245,7 +245,7 @@ app.post("/addtocart", fetchUser, async (req, res) => {
 
 //Creating endpoint to remove product from cartdata
 app.post("/removefromcart", fetchUser, async (req, res) => {
-  console.log("removed", req.body.itemId);
+  console.log("Successfully removed", req.body.itemId);
   let userData = await Users.findOne({ _id: req.user.id });
   if (userData.cartData[req.body.itemId] > 0)
     userData.cartData[req.body.itemId] -= 1;
